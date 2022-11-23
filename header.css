@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  nav{
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 9999;
+    background: black;
+    height: 80px;
+    width: 100%;
+  }
+  label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    background: rgb(83, 78, 78);
+    transition: .4s;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 28px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    nav ul li a{
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      float: right;
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      /* background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3); */
+      /* background-size: 1800% 1800%; */
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: #7c868d;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
+  
+  /* @media(max-width:1024px){
+    label.logo{
+      font-size: 25px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  } */
